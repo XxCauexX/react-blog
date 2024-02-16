@@ -7,8 +7,7 @@ import { collection, getDocs } from "firebase/firestore";
 import { useEffect, useState } from "react";
 
  function Home(){
-    const [titulo, setTitulo] = useState("");
-    const [conteudo, setConteudo] = useState("");
+    
     const [posts, setPosts] = useState([]);
 
     const vai = {};
