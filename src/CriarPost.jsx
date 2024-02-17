@@ -21,11 +21,16 @@ function CriarPost(){
     return (
         <>
             <Menu/>
-            <main>
+            <main style={{width: "100%", display:"flex", justifyContent:"center", alignItems:"center", flexDirection: "row"}}>
                 <div >
-                    <form onSubmit={criarPost} style={{display: "flex", flexWrap: "wrap"}}>           
-                        <input type="text" value={titulo} onChange={(e) => setTitulo(e.target.value)} name="titulo" placeholder="Informe o titulo do post" />
-                        <textarea name="conteudo" value={conteudo} onChange={(e) => setConteudo(e.target.value)} placeholder="informe o conteudo do post" id="" cols="30" rows="1"></textarea>
+                    <form onSubmit={criarPost} style={{display: "flex", flexWrap: "wrap"}}>          
+                    <div>
+                        <input type="text" value={titulo} onChange={(e) => setTitulo(e.target.value)} name="titulo" placeholder="Informe o titulo do post" />    
+                    </div> 
+                    <div>
+                    <textarea name="conteudo" value={conteudo} onChange={(e) => setConteudo(e.target.value)} placeholder="informe o conteudo do post" id="" cols="30" rows="1"></textarea>
+                    </div>
+                        
                         <button >Adicionar Post</button>
                     </form>
                 </div>
